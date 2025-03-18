@@ -52,6 +52,8 @@
 			</tbody>
 
 		</table>
+          <input type="submit" value="Delete Selected" name="action">
+            input type="submit" value="Edit Selected" name="action">
 		<input type="submit" value="Delete"> <input type="submit"
 			name="action" value="Delete Selected Employee(s)"> <input
 			type="submit" name="action" value="Edit Selected Employee(s)">
