@@ -76,6 +76,7 @@
 	<%-- Display success message if the operation is successful --%>
 	<c:if
 		test="${not empty operationStatus and operationStatus == 'success'}">
+response.sendRedirect("home.jsp?msg=added");
 		<div id="success-message" class="success-message">
 			<span id="message-text">Operation was successful!</span>
 			<button id="close-btn" class="close-btn" onclick="closeMessage()">×</button>
