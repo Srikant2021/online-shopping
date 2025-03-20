@@ -1,25 +1,19 @@
-package Shopping;
-import java.sql.*;
+package com.vts.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 
 public class ConnectionProvider {
-	
-	 
+	public static Connection getCon()  {
+		try{  
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/vedant?useSSL=false","root","admin");  
 
-	public static Connection getCon() throws ClassNotFoundException, SQLException
-	{
-		try
-		{
-			
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","1962");
-			return con;
-		}
-		catch(Exception e)
-		{
-			System.out.print(e);
-		    return null;
-		}
-		
-	}
-	
+			return con;  
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}  
+	}  
 }
